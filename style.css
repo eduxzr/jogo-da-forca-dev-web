@@ -1,0 +1,190 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  margin: 20px;
+  background-color: #000000;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+h1.titulo {
+  font-size: 3rem;
+  color: #ff0000;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#pergunta {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#jogo {
+  max-width: 400px;
+  margin: 0 auto;
+
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#pergunta {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+button:hover {
+  background-color: #6f3232;
+  padding: 12px 22px;
+}
+
+#botao-dica {
+  background-color: #9eab12;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+#botao-dica:hover {
+  background-color: #005a7e;
+}
+
+.alert {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ffebcc;
+  color: #cc6600;
+  border: 1px solid #cc6600;
+  border-radius: 5px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dica {
+  font-family: Arial, sans-serif;
+  color: #ffff00;
+}
+
+.erro {
+  font-family: Arial, sans-serif;
+  color: #ff0000;
+}
+
+.acerto {
+  font-family: Arial, sans-serif;
+  color: #00ff22;
+}
+
+
+.botao {
+  width: 150px;
+  height: 40px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #ff0000;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.botao:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.botao:active {
+  color: #000
+}
+
+.botao:active:after {
+  background: transparent;
+}
+
+.botao:hover:before {
+  opacity: 1;
+}
+
+.botao:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ff0000;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
